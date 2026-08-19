@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Track Builder - Signed Out{% endblock %}
+
+{% block content %}
+<div class="auth-page">
+    <div class="auth-card">
+        <div class="auth-header">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="1.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h1>Signed Out</h1>
+            <p>You've been successfully signed out of Track Builder.</p>
+        </div>
+
+        <div class="auth-actions">
+            <a href="/accounts/login/" class="btn btn-primary">Sign In Again</a>
+            <a href="/" class="btn btn-secondary">Back to Map</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .auth-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 20px;
+    }
+
+    .auth-card {
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        border-radius: 16px;
+        padding: 40px 32px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .auth-header {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin: 16px 0 8px;
+    }
+
+    .auth-header p {
+        font-size: 14px;
+        color: var(--gray-500);
+        line-height: 1.5;
+    }
+
+    .auth-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .auth-actions .btn {
+        text-align: center;
+        text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+        .auth-card {
+            padding: 32px 24px;
+        }
+    }
+</style>
+{% endblock %}
